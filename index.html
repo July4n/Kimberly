@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimberlyy</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-family: Arial, sans-serif; /* Cambia la fuente a Arial */
+        }
+        .kim-section {
+            background-image: url('Kk/fondo-mobile.png');
+            background-size: cover;
+            background-position: center;
+            padding: 20px 0;
+            color: white;
+        }
+        .name-box {
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado con logo -->
+    <header style="padding: 5px 0; background-color: transparent;">
+        <img src="Kk/logo.png" alt="LOGOs" style="width: 120px; height: 120px; border: 5px solid black; border-radius: 50%;">
+    </header>
+    
+    <!-- Línea negra después del logo -->
+    <hr style="border: 2px solid black; width: 100%; margin: 0;">
+    
+    <!-- Sección "Kim" con imagen y descripción -->
+    <section class="kim-section">
+        <h2 style="margin: 0;">Kim</h2>
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <div>
+                <img src="Kk/yo.jpeg" alt="Yo" style="width: 150px; height: auto; border: 2px solid white;">
+            </div>
+            <div class="name-box">
+                <h1><strong>Kimberly Cuadros</strong></h1>
+                <span><strong>@kimcuadros</strong></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Línea negra que separa la información del footer -->
+    <hr style="border: 2px solid black; width: 100%; margin: 0;">
+    
+    <!-- Sección de información -->
+    <section style="background-color: white; color: black; padding: 10px; margin: 0;">
+        <p><strong>Soy Kimberly Cuadros, diseñadora de modas hace 5 años y soy jefe de mi propia empresa, MODA FEMENINA.</strong></p>
+        <p><strong>Me gusta crear ropa inspirada en todo tipo de mujer. Antes de ser diseñadora, era docente en primera infancia, tengo 10 años de experiencia, trabajaba en un jardín. En mis tiempos libres, me gusta leer y cocinar, me conocen por ser una gran diseñadora carismática, amable y comprensiva. Viajo a muchos lugares del mundo para conocer nuevas modas, costumbres y tradiciones.</strong></p>
+    </section>
+
+    <!-- Cuadro negro de redes sociales al final de la página -->
+    <footer style="background-color: black; color: white; text-align: center; padding: 20px 0; width: 100%;">
+        <h2><strong>Mis redes sociales</strong></h2>
+        <div style="display: flex; justify-content: center; gap: 15px;">
+            <a href="https://www.tiktok.com/@kim_y280?_t=8qvxjOaowRa&_r=1" target="_blank">
+                <img src="redes/tiktok.png" alt="TikTok" style="width: 40px; height: 40px; border-radius: 50%;">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100079190995648&mibextid=ZbWKwL" target="_blank">
+                <img src="redes/fc.png" alt="Facebook" style="width: 40px; height: 40px; border-radius: 50%;">
+            </a>
+        </div>
+        <p style="margin-top: 20px;"><strong>Visitas: <span id="visitCounter">0</span></strong></p>
+    </footer>
+
+    <script>
+        // Contador de visitas en almacenamiento local
+        let visitCount = localStorage.getItem('visitCount') ? parseInt(localStorage.getItem('visitCount')) : 0;
+        visitCount++;
+        localStorage.setItem('visitCount', visitCount);
+        document.getElementById('visitCounter').innerText = visitCount;
+    </script>
+</body>
+</html>
